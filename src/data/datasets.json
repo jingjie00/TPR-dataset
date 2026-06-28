@@ -1,0 +1,639 @@
+{
+  "version": "2026-06-28",
+  "status": "published",
+  "dqi_formula": "round(sum(scores) / 40 \u00d7 100)",
+  "datasets": [
+    {
+      "id": "pandora-talks",
+      "name": "PANDORA Talks",
+      "short_name": "PANDORA",
+      "asset_type": "original dataset",
+      "dqi_100": 70,
+      "scores": {
+        "label_grounding": 4.5,
+        "text_naturalness": 5.0,
+        "scale_size": 5.0,
+        "observation_depth": 5.0,
+        "theory_coverage": 1.0,
+        "language_coverage": 1.0,
+        "demographic_diversity": 3.5,
+        "governance_reproducibility": 3.0
+      },
+      "badges": [
+        "Natural",
+        "Human-annotated"
+      ],
+      "frameworks": [
+        "OCEAN/big-5"
+      ],
+      "suggested_use": "naturalistic Reddit benchmark with continuous big-5/OCEAN values and demographic fields but request/terms-limited reproducibility",
+      "citations": [
+        {
+          "key": "gjurkovic_2021",
+          "doi": "10.18653/v1/2021.socialnlp-1.12"
+        }
+      ],
+      "note": "Type: original dataset. ACL SocialNLP source (gjurkovic_2021) reports ~10,295 Reddit authors and ~17.6M English comments with continuous big-5/OCEAN values on a 0\u2013100 style scale plus demographic metadata. Literature usage count is low despite solid DQI because request/terms access adds friction versus public Kaggle or Essays releases. Scoring rationale: high scale, observation depth, continuous trait resolution, and demographic metadata; theory coverage is scored as single-theory big-5/OCEAN rather than multi-theory.",
+      "theory": {
+        "frameworks": [
+          "OCEAN/big-5"
+        ],
+        "traits_or_labels": "Continuous big-5/OCEAN values on a 0\u2013100 style scale; age, gender, country, continent, and region-style demographic metadata",
+        "instruments_or_method": "Continuous trait values and demographic profile metadata reported in the source corpus",
+        "multi_theory_notes": "Single-theory big-5/OCEAN dataset; continuous values support regression, calibration, and ordinal analysis rather than binary class labels alone"
+      },
+      "provenance": {
+        "text_source": "Reddit comments from personality-related communities",
+        "language": "English-dominant",
+        "label_source": "Continuous big-5/OCEAN values and demographic profile metadata",
+        "collection_context": "~10,295 Reddit authors; ~17.6M English comments reported in source-page summary",
+        "access_and_license": "Request form plus terms of use",
+        "known_limitations": "Privacy and Reddit deletion constraints; requires terms-compliant reuse; independent reproduction depends on request approval",
+        "provenance_labels": [
+          "Natural",
+          "Human-annotated"
+        ]
+      },
+      "usage_count": 1,
+      "access_status": "request/terms",
+      "size_label": "10.3k authors \u00b7 17.6M comments",
+      "total_rows_or_users": 10295,
+      "n_comments": 17600000
+    },
+    {
+      "id": "kaggle-mbti",
+      "name": "Kaggle dataset + focal-loss split protocol",
+      "short_name": "Kaggle*",
+      "asset_type": "original dataset",
+      "dqi_100": 61,
+      "scores": {
+        "label_grounding": 3.0,
+        "text_naturalness": 4.0,
+        "scale_size": 5.0,
+        "observation_depth": 4.0,
+        "theory_coverage": 1.0,
+        "language_coverage": 1.0,
+        "demographic_diversity": 1.0,
+        "governance_reproducibility": 4.5
+      },
+      "badges": [
+        "Self-declared"
+      ],
+      "frameworks": [
+        "MBTI"
+      ],
+      "suggested_use": "self-declared MBTI benchmark with curated data and latest improved personality-stratified splitting",
+      "citations": [
+        {
+          "key": "jie_nd",
+          "doi": "10.57967/HF/3955"
+        },
+        {
+          "key": "tan_2025",
+          "doi": "10.1038/s41598-025-22853-y"
+        }
+      ],
+      "note": "Type: original dataset. Curated Kaggle dataset (jie_nd) with Kaggle dataset + focal-loss split protocol (tan_2025). Strong scale and observation under the improved split, but labels remain self-declared MBTI.",
+      "theory": {
+        "frameworks": [
+          "MBTI"
+        ],
+        "traits_or_labels": "I/E, N/S, T/F, J/P",
+        "instruments_or_method": "Self-declared MBTI profile labels; not professionally administered MBTI",
+        "multi_theory_notes": "Large-scale MBTI benchmark with convenient four-dichotomy classification format"
+      },
+      "provenance": {
+        "text_source": "Online forum/social-media-style posts aggregated per user",
+        "language": "English",
+        "label_source": "Self-declared MBTI profile labels from the curated Kaggle release",
+        "collection_context": "~8.7k users; aggregated multi-post histories",
+        "split_or_evaluation": "Kaggle dataset + focal-loss split protocol (tan_2025)",
+        "access_and_license": "Public curated Hugging Face DOI (jie_nd)",
+        "known_limitations": "Self-selection bias; self-declared labels; class imbalance",
+        "provenance_labels": [
+          "Self-declared"
+        ]
+      },
+      "enhanced_protocol": true,
+      "usage_count": 8,
+      "access_status": "public",
+      "size_label": "8.7k users",
+      "total_rows_or_users": 8675
+    },
+    {
+      "id": "mypersonality",
+      "name": "myPersonality",
+      "short_name": "myPersonality",
+      "asset_type": "original dataset",
+      "dqi_100": 56,
+      "scores": {
+        "label_grounding": 4.0,
+        "text_naturalness": 4.0,
+        "scale_size": 4.5,
+        "observation_depth": 4.0,
+        "theory_coverage": 1.0,
+        "language_coverage": 1.0,
+        "demographic_diversity": 2.0,
+        "governance_reproducibility": 1.0
+      },
+      "badges": [
+        "Self-declared"
+      ],
+      "frameworks": [
+        "Big Five"
+      ],
+      "suggested_use": "large-scale social-media measurement with valuable big-5 labels but strong governance limits",
+      "citations": [
+        {
+          "key": "kosinski_2013",
+          "doi": "10.1073/pnas.1218772110"
+        }
+      ],
+      "note": "Type: original dataset. Historically influential Facebook-linked big-5 resource with good scale and repeated digital behavior, but restricted/deprecated access substantially limits governance and reproducibility for new studies.",
+      "theory": {
+        "frameworks": [
+          "Big Five"
+        ],
+        "traits_or_labels": "Big Five O, C, E, A, N",
+        "instruments_or_method": "Self-report personality ratings linked to Facebook application participation",
+        "multi_theory_notes": "Historically central social-media personality dataset despite current access restrictions"
+      },
+      "provenance": {
+        "text_source": "Facebook application/status and platform behavioral records",
+        "language": "English-dominant",
+        "label_source": "Self-report ratings from myPersonality application users",
+        "collection_context": "~9.9k users in extracted summary",
+        "access_and_license": "Restricted/deprecated access",
+        "known_limitations": "Privacy, consent, and governance constraints limit reproducible reuse",
+        "provenance_labels": [
+          "Self-declared"
+        ]
+      },
+      "usage_count": 5,
+      "access_status": "restricted/deprecated",
+      "size_label": "9.9k users",
+      "total_rows_or_users": 9917
+    },
+    {
+      "id": "adam-augmentation",
+      "name": "ADAM-style language-agnostic augmentation",
+      "short_name": "ADAM",
+      "asset_type": "augmented dataset",
+      "dqi_100": 54,
+      "scores": {
+        "label_grounding": 3.0,
+        "text_naturalness": 2.5,
+        "scale_size": 4.0,
+        "observation_depth": 3.0,
+        "theory_coverage": 1.0,
+        "language_coverage": 4.0,
+        "demographic_diversity": 1.0,
+        "governance_reproducibility": 3.0
+      },
+      "badges": [
+        "LLM-augmented",
+        "Translated"
+      ],
+      "frameworks": [
+        "Multilingual transfer"
+      ],
+      "suggested_use": "multilingual augmentation and transfer with required human/local validation for generated language",
+      "citations": [
+        {
+          "key": "tan_2026",
+          "doi": "10.1109/TCDS.2026.3682672"
+        }
+      ],
+      "note": "Type: augmented dataset. Language-agnostic multilingual augmentation (tan_2026). Receives language coverage credit, but theory score stays low because it inherits source-framework labels rather than validating a new theory mapping; generated/translated text needs human or local validation for full credit.",
+      "theory": {
+        "frameworks": [
+          "Multilingual transfer"
+        ],
+        "traits_or_labels": "Inherits trait/framework coverage from source corpora",
+        "instruments_or_method": "Cross-lingual attention distillation and multilingual augmentation",
+        "multi_theory_notes": "Theory score reflects inherited source frameworks only; language-agnostic transfer is the main contribution"
+      },
+      "provenance": {
+        "text_source": "Augmented or translated text derived from existing personality-labeled corpora",
+        "language": "Multilingual expansion beyond source-language coverage",
+        "label_source": "Inherited from source datasets",
+        "collection_context": "Augmented dataset protocol (tan_2026), not a new primary human corpus",
+        "access_and_license": "Depends on source data access and augmentation pipeline release",
+        "known_limitations": "Generated/translated examples need native-speaker or local-instrument validation",
+        "provenance_labels": [
+          "LLM-augmented",
+          "Translated"
+        ]
+      },
+      "usage_count": 1,
+      "access_status": "augmented/protocol",
+      "size_label": "source-dependent augmented set",
+      "total_rows_or_users": 8675
+    },
+    {
+      "id": "deimann",
+      "name": "Deimann",
+      "short_name": "Deimann",
+      "asset_type": "original dataset",
+      "dqi_100": 53,
+      "scores": {
+        "label_grounding": 3.0,
+        "text_naturalness": 5.0,
+        "scale_size": 4.0,
+        "observation_depth": 4.0,
+        "theory_coverage": 1.0,
+        "language_coverage": 1.0,
+        "demographic_diversity": 1.0,
+        "governance_reproducibility": 2.0
+      },
+      "badges": [
+        "Self-declared"
+      ],
+      "frameworks": [
+        "MBTI"
+      ],
+      "suggested_use": "Reddit-scale MBTI stress-test where filtering and label ambiguity must be audited",
+      "citations": [
+        {
+          "key": "deimann_2024",
+          "doi": "10.48550/ARXIV.2408.16089"
+        }
+      ],
+      "note": "Type: original dataset or study-dependent collection. 2024 Reddit aggregation study (deimann_2024) reports about 6.6M collected comments and about 4.06M comments after preprocessing. Strong naturalness and scale, but governance remains study-dependent unless the exact collection, filtering, leakage control, and split protocol are released.",
+      "theory": {
+        "frameworks": [
+          "MBTI"
+        ],
+        "traits_or_labels": "16 MBTI types; Jungian dominant-function variants in some settings",
+        "instruments_or_method": "Subreddit/profile-derived self-proclaimed MBTI labels",
+        "multi_theory_notes": "Large-scale Reddit MBTI study with documented filtering and unfiltered-data concerns"
+      },
+      "provenance": {
+        "text_source": "Reddit comments from MBTI-related subreddits",
+        "language": "English-dominant",
+        "label_source": "Self-proclaimed MBTI labels on Reddit users/profiles",
+        "collection_context": "~6.6M collected; ~4.06M filtered comments",
+        "access_and_license": "Study-dependent unless the exact scrape, filtering, and split protocol are released",
+        "known_limitations": "Platform-specific behavior; MBTI-topic leakage; filtering, label ambiguity, and unfiltered-data issues",
+        "provenance_labels": [
+          "Self-declared"
+        ]
+      },
+      "usage_count": 1,
+      "access_status": "study-dependent",
+      "size_label": "4.06M filtered comments",
+      "total_rows_or_users": 4060000
+    },
+    {
+      "id": "jam-synthesis",
+      "name": "JAM-style LLM-filtered theory synthesis",
+      "short_name": "JAM",
+      "asset_type": "augmented dataset",
+      "dqi_100": 53,
+      "scores": {
+        "label_grounding": 3.2,
+        "text_naturalness": 3.2,
+        "scale_size": 4.2,
+        "observation_depth": 3.0,
+        "theory_coverage": 1.5,
+        "language_coverage": 1.0,
+        "demographic_diversity": 1.0,
+        "governance_reproducibility": 4.0
+      },
+      "badges": [
+        "LLM-augmented"
+      ],
+      "frameworks": [
+        "Cross-theory synthesis"
+      ],
+      "suggested_use": "LLM-filtered/cleaned synthesis from Essays + focal-loss split plus Kaggle dataset + focal-loss split under focal-loss protocol; partial theory-extension credit because it combines and filters rather than fully validating two theories",
+      "citations": [
+        {
+          "key": "jie_nd_b",
+          "doi": "10.57967/HF/3956"
+        },
+        {
+          "key": "jie_nd",
+          "doi": "10.57967/HF/3955"
+        },
+        {
+          "key": "tan_2025",
+          "doi": "10.1038/s41598-025-22853-y"
+        },
+        {
+          "key": "tan_2026_b",
+          "doi": "10.1109/TCSS.2025.3593323"
+        }
+      ],
+      "note": "Type: augmented dataset. LLM-filtered synthesis over Essays + focal-loss split and Kaggle dataset + focal-loss split (jie_nd_b; jie_nd; tan_2025; tan_2026_b). Partial theory-extension credit for combining and filtering source frameworks, but it does not yet validate two personality theories as interchangeable measurement targets.",
+      "theory": {
+        "frameworks": [
+          "Cross-theory synthesis"
+        ],
+        "traits_or_labels": "Combined Essays/big-5 and Kaggle/MBTI source frameworks under LLM filtering",
+        "instruments_or_method": "Psychology-informed prompting with LLM filtering/cleaning",
+        "multi_theory_notes": "Partial theory-extension credit for combining source frameworks; not yet interchangeable multi-theory validation"
+      },
+      "provenance": {
+        "text_source": "LLM-filtered or cleaned synthesis from Essays + focal-loss split and Kaggle dataset + focal-loss split",
+        "language": "Primarily English source lineage",
+        "label_source": "Inherited and transformed from source datasets",
+        "collection_context": "Augmented dataset built from source corpora under tan_2025/tan_2026_b workflow",
+        "access_and_license": "Depends on source corpus access plus published synthesis protocol",
+        "known_limitations": "Inherits source label noise; synthetic outputs need cross-language and demographic validation",
+        "provenance_labels": [
+          "LLM-augmented"
+        ]
+      },
+      "usage_count": 1,
+      "access_status": "augmented/protocol",
+      "size_label": "Essays + Kaggle derived",
+      "total_rows_or_users": 11154
+    },
+    {
+      "id": "cped",
+      "name": "CPED",
+      "short_name": "CPED",
+      "asset_type": "original dataset",
+      "dqi_100": 52,
+      "scores": {
+        "label_grounding": 3.5,
+        "text_naturalness": 3.0,
+        "scale_size": 4.0,
+        "observation_depth": 3.5,
+        "theory_coverage": 1.0,
+        "language_coverage": 1.0,
+        "demographic_diversity": 1.0,
+        "governance_reproducibility": 4.0
+      },
+      "badges": [
+        "Natural"
+      ],
+      "frameworks": [
+        "Big Five"
+      ],
+      "suggested_use": "Chinese dialogue benchmark for interactional and cross-cultural exploration",
+      "citations": [
+        {
+          "key": "chen_2022",
+          "doi": "10.48550/ARXIV.2205.14727"
+        }
+      ],
+      "note": "Type: original dataset. Large public Chinese personalized/emotional dialogue dataset. Stronger scale than most English-only small corpora, but row-level labels may not equal stable real-person traits.",
+      "theory": {
+        "frameworks": [
+          "Big Five"
+        ],
+        "traits_or_labels": "Big Five-style personality labels in Chinese personalized/emotional dialogue",
+        "instruments_or_method": "Three psychology-major annotator projective ratings on dialogue rows",
+        "multi_theory_notes": "Useful for dialogue research; row labels may not equal stable real-person traits"
+      },
+      "provenance": {
+        "text_source": "Chinese personalized and emotional dialogue",
+        "language": "Chinese",
+        "label_source": "Three psychology-major annotator projective ratings",
+        "collection_context": "~132.8k rows; ~1.12M words",
+        "access_and_license": "Public release (chen_2022)",
+        "known_limitations": "Row-level dialogue labels may not equal stable real-person traits",
+        "provenance_labels": [
+          "Natural"
+        ]
+      },
+      "usage_count": 1,
+      "access_status": "public",
+      "size_label": "132.8k rows",
+      "total_rows_or_users": 132762
+    },
+    {
+      "id": "ear",
+      "name": "EAR",
+      "short_name": "EAR",
+      "asset_type": "original dataset",
+      "dqi_100": 51,
+      "scores": {
+        "label_grounding": 4.0,
+        "text_naturalness": 5.0,
+        "scale_size": 2.0,
+        "observation_depth": 4.5,
+        "theory_coverage": 1.0,
+        "language_coverage": 1.0,
+        "demographic_diversity": 1.0,
+        "governance_reproducibility": 1.0
+      },
+      "badges": [
+        "Natural"
+      ],
+      "frameworks": [
+        "Big Five"
+      ],
+      "suggested_use": "naturalistic behavioral-language research with strong observation depth but restricted reproducibility",
+      "citations": [
+        {
+          "key": "mehl_2001",
+          "doi": "10.3758/BF03195410"
+        },
+        {
+          "key": "mairesse_2007",
+          "doi": "10.1145/1273496.1273517"
+        }
+      ],
+      "note": "Type: original dataset. Naturalistic EAR transcriptions with strong observation depth, but unavailable public access limits governance and reproducibility for ordinary benchmarking.",
+      "theory": {
+        "frameworks": [
+          "Big Five"
+        ],
+        "traits_or_labels": "Big Five O, C, E, A, N",
+        "instruments_or_method": "Self-report Big Five ratings linked to naturalistic behavioral sampling",
+        "multi_theory_notes": "Gold-standard ecological sampling design for psycholinguistic validity research"
+      },
+      "provenance": {
+        "text_source": "Transcribed snippets from Electronically Activated Recorder everyday conversations",
+        "language": "English",
+        "label_source": "Self-report Big Five ratings from the original EAR program",
+        "collection_context": "96 subjects; ~97k words in extracted summary",
+        "access_and_license": "No usable public download path identified",
+        "known_limitations": "High ecological value but poor reproducibility as a public benchmark",
+        "provenance_labels": [
+          "Natural"
+        ]
+      },
+      "usage_count": 2,
+      "access_status": "unavailable",
+      "size_label": "96 subjects",
+      "total_rows_or_users": 96
+    },
+    {
+      "id": "essays-big-five",
+      "name": "Essays + focal-loss split protocol",
+      "short_name": "Essays*",
+      "asset_type": "original dataset",
+      "dqi_100": 45,
+      "scores": {
+        "label_grounding": 4.5,
+        "text_naturalness": 2.0,
+        "scale_size": 3.0,
+        "observation_depth": 1.5,
+        "theory_coverage": 1.0,
+        "language_coverage": 1.0,
+        "demographic_diversity": 1.0,
+        "governance_reproducibility": 4.0
+      },
+      "badges": [
+        "Human-annotated"
+      ],
+      "frameworks": [
+        "Big Five"
+      ],
+      "suggested_use": "controlled big-5 benchmark with curated data and personality-stratified focal-loss splitting",
+      "citations": [
+        {
+          "key": "pennebaker_1999",
+          "doi": "10.1037/0022-3514.77.6.1296"
+        },
+        {
+          "key": "jie_nd_b",
+          "doi": "10.57967/HF/3956"
+        },
+        {
+          "key": "tan_2025",
+          "doi": "10.1038/s41598-025-22853-y"
+        }
+      ],
+      "note": "Type: original dataset. Controlled big-5 essays from pennebaker_1999 and jie_nd_b; Essays + focal-loss split protocol cites tan_2025 for personality-stratified evaluation. Strong label clarity and governance, but low naturalness and observation depth.",
+      "theory": {
+        "frameworks": [
+          "Big Five"
+        ],
+        "traits_or_labels": "Big Five O, C, E, A, N",
+        "instruments_or_method": "Self-report and observer/projective ratings in the original stream-of-consciousness study",
+        "multi_theory_notes": "Controlled-writing benchmark with clear big-5 framing and long citation history"
+      },
+      "provenance": {
+        "text_source": "Student stream-of-consciousness / controlled writing essays",
+        "language": "English",
+        "label_source": "pennebaker_1999 labels plus curated jie_nd_b release",
+        "collection_context": "2,479 rows; ~1.66M words",
+        "split_or_evaluation": "Essays + focal-loss split protocol (tan_2025)",
+        "access_and_license": "Public curated dataset DOI and original study DOI",
+        "known_limitations": "Controlled writing limits ecological validity; one main sample per participant",
+        "provenance_labels": [
+          "Human-annotated"
+        ]
+      },
+      "enhanced_protocol": true,
+      "usage_count": 6,
+      "access_status": "public",
+      "size_label": "2.5k rows",
+      "total_rows_or_users": 2479
+    },
+    {
+      "id": "friendpersona",
+      "name": "FriendPersona",
+      "short_name": "FriendPersona",
+      "asset_type": "original dataset",
+      "dqi_100": 44,
+      "scores": {
+        "label_grounding": 3.0,
+        "text_naturalness": 2.0,
+        "scale_size": 2.0,
+        "observation_depth": 3.0,
+        "theory_coverage": 1.0,
+        "language_coverage": 1.0,
+        "demographic_diversity": 0.5,
+        "governance_reproducibility": 4.0
+      },
+      "badges": [
+        "Synthetic"
+      ],
+      "frameworks": [
+        "Big Five",
+        "Persona"
+      ],
+      "suggested_use": "dialogue/persona modeling with fictional-character validity limits",
+      "citations": [
+        {
+          "key": "chen_2016",
+          "doi": "10.18653/v1/W16-3612"
+        }
+      ],
+      "note": "Type: original dataset. Public dialogue corpus from fictional television characters. Useful for persona modeling, but fictional dialogue limits real-person psychometric validity.",
+      "theory": {
+        "frameworks": [
+          "Big Five",
+          "Persona"
+        ],
+        "traits_or_labels": "Big Five-style persona ratings on fictional characters",
+        "instruments_or_method": "Three-annotator projective ratings on dialogue lines/characters",
+        "multi_theory_notes": "Dialogue/persona modeling resource rather than a real-person psychometric corpus"
+      },
+      "provenance": {
+        "text_source": "Friends television-show dialogue",
+        "language": "English",
+        "label_source": "Three-annotator projective ratings on fictional characters",
+        "collection_context": "711 rows; ~111k words",
+        "access_and_license": "Public dialogue release (chen_2016)",
+        "known_limitations": "Fictional/scripted dialogue is not spontaneous real-person communication",
+        "provenance_labels": [
+          "Synthetic"
+        ]
+      },
+      "usage_count": 1,
+      "access_status": "public",
+      "size_label": "711 rows",
+      "total_rows_or_users": 711
+    }
+  ],
+  "dimensions": [
+    {
+      "key": "label_grounding",
+      "label": "Label grounding",
+      "short": "Label",
+      "description": "Validated questionnaires, reliability evidence, trained raters, documented self-declaration, or reported label provenance."
+    },
+    {
+      "key": "text_naturalness",
+      "label": "Text naturalness",
+      "short": "Natural",
+      "description": "Everyday, longitudinal, platform-native, or interactional communication, as opposed to scripted, generated, or meta-discussion text."
+    },
+    {
+      "key": "scale_size",
+      "label": "Scale (size)",
+      "short": "Scale",
+      "starred": true,
+      "description": "Corpus size in users, documents, words, comments, or rows, with cohort-relative normalization."
+    },
+    {
+      "key": "observation_depth",
+      "label": "Observation",
+      "short": "Obs",
+      "description": "Repeated observations per person, longitudinal coverage, multiple posts or comments per user, and user-level aggregation."
+    },
+    {
+      "key": "theory_coverage",
+      "label": "Theory coverage",
+      "short": "Theory",
+      "starred": true,
+      "description": "Representation of Big Five, MBTI, HEXACO, Enneagram, facets, cross-theory mapping, or uncertainty-aware label design."
+    },
+    {
+      "key": "language_coverage",
+      "label": "Language coverage",
+      "short": "Lang",
+      "starred": true,
+      "description": "Multilingual text, locally validated instruments, native-speaker review, and language-held-out evaluation."
+    },
+    {
+      "key": "demographic_diversity",
+      "label": "Demographic diversity",
+      "short": "Demo",
+      "description": "Participant diversity, geographic metadata, demographic distributions, representativeness reporting, and bias analysis."
+    },
+    {
+      "key": "governance_reproducibility",
+      "label": "Governance & reproducibility",
+      "short": "Gov",
+      "description": "Public or restricted access clarity, stable download path, license/terms, reproducible splits, class-balance reporting, documented preprocessing, and leakage control."
+    }
+  ]
+}

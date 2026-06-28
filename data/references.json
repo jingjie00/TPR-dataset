@@ -1,0 +1,82 @@
+[
+  {
+    "key": "gebru_2021",
+    "authors": "Gebru et al.",
+    "title": "Datasheets for datasets",
+    "doi": "10.1145/3458723",
+    "year": 2021,
+    "role": "Foundational framework for documenting dataset motivation, composition, collection, preprocessing, distribution, and ethical considerations."
+  },
+  {
+    "key": "bender_2018",
+    "authors": "Bender & Friedman",
+    "title": "Data Statements for Natural Language Processing",
+    "doi": "10.1162/tacl_a_00041",
+    "year": 2018,
+    "role": "Framework for documenting speaker populations, language variety, and annotation context in NLP corpora."
+  },
+  {
+    "key": "holland_2018",
+    "authors": "Holland et al.",
+    "title": "The Dataset Nutrition Label",
+    "doi": "10.48550/ARXIV.1805.03677",
+    "year": 2018,
+    "role": "Approach to summarizing dataset quality characteristics for research consumers."
+  },
+  {
+    "key": "xu_2025",
+    "authors": "Xu et al.",
+    "title": "Multilingual LLM and corpora alignment",
+    "doi": "10.1007/s11704-024-40579-4",
+    "year": 2025,
+    "role": "Context for multilingual data coverage, alignment, and bias in large language model corpora."
+  },
+  {
+    "key": "tan_2026",
+    "authors": "Tan et al.",
+    "title": "Cross-Lingual Attention Distillation (ADAM)",
+    "doi": "10.1109/TCDS.2026.3682672",
+    "year": 2026,
+    "role": "Multilingual personality recognition via cross-lingual augmentation; motivates validation requirements for generated multilingual text."
+  },
+  {
+    "key": "tan_2025",
+    "authors": "Tan et al.",
+    "title": "Adaptive focal loss with personality stratification",
+    "doi": "10.1038/s41598-025-22853-y",
+    "year": 2025,
+    "role": "Personality-stratified train/test partitioning and class-imbalance-aware evaluation for MBTI recognition."
+  },
+  {
+    "key": "tan_2026_b",
+    "authors": "Tan et al.",
+    "title": "Prompting-in-a-Series (JAM)",
+    "doi": "10.1109/TCSS.2025.3593323",
+    "year": 2026,
+    "role": "Theory-agnostic personality representation with psychology-informed prompting and LLM-filtered synthesis."
+  },
+  {
+    "key": "gjurkovic_2021",
+    "authors": "Gjurkovic et al.",
+    "title": "PANDORA Talks",
+    "doi": "10.18653/v1/2021.socialnlp-1.12",
+    "year": 2021,
+    "role": "Naturalistic Reddit dataset with continuous big-5/OCEAN personality values and demographic metadata (PANDORA Talks)."
+  },
+  {
+    "key": "deimann_2024",
+    "authors": "Deimann et al.",
+    "title": "Personality prediction from Reddit comments",
+    "doi": "10.48550/ARXIV.2408.16089",
+    "year": 2024,
+    "role": "Large-scale Reddit MBTI corpus with documented preprocessing and data-quality considerations."
+  },
+  {
+    "key": "jie_nd",
+    "authors": "Tan Jing Jie",
+    "title": "Kaggle dataset (curated)",
+    "doi": "10.57967/HF/3955",
+    "year": 2025,
+    "role": "Curated Kaggle personality corpus with documented preprocessing pipeline."
+  }
+]
